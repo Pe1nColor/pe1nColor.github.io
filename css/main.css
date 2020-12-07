@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(../image3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+main{
+    width: 70%;
+    padding: 20px;
+    margin-left: 17%;
+    background-color:  silver;
+    justify-content: center;
+        
+}
+
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.video{
+    display: flex;
+
+      
+ }
+
+
+.video1{
+     margin: 30px;  
+ }
+
+
+.photo{
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    margin: 20px;
+    border-radius: 20px;
+    margin-left: 50px;
+    background-size: 183%;
+    background-repeat: no-repeat;
+    transition: all 1.8s ease;
+    border-radius: 300px;
+    border: 3px solid black;
+    
+
+}
+
+
+@font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+.photo:hover{
+    transform: rotate(360deg) scale(2);
+    opacity: 1;
+}
+
+
+
+
+
+h1{
+  margin-left: 400px; 
+  margin-bottom: 35px;
+  padding-top: 10px;
+  width: 100%;
+  
+}
+
+
+.photo1{
+    background-image: url(../img/image2.jpg);
+    
+}
+
+.photo2{
+    background-image: url(../img/image3.jpg);
+}
+
+.photo3{
+    background-image: url(../img/image4.jpg);
+}
+
+.photo4{
+    background-image: url(../img/image5.jpg);
+}
+
+.photo5{
+    background-image: url(../img/image6.jpg);
+}
+
+.photo6{
+    background-image: url(../img/image7.jpg);
+}
+
+.photo7{
+    background-image: url(../img/image8.jpg);
+}
+
+.photo8{
+    background-image: url(../img/image9.jpg);
+}
+
+.photo9{
+    background-image: url(../img/image10.jpg);
+}
+
+.photo10{
+    background-image: url(../img/image11.jpg);   
+}
+
+.photo11{
+    background-image: url(../img/image12.jpg);
+}
+
+.photo12{
+    background-image: url(../img/image13.jpg);
+}
+
+
+p{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    color: snow;
+    text-shadow: 2px 2px black;
+    margin-bottom: 6px;
+    border: 7px solid black;
+    width: 100%;
+    
+    
+     
+   
+
+}
+
+.back{
+    background-image: url(../img/image13.jpg);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.icon-bar{
+    width: 100%;
+    background-color: grey;
+}
+
+
+
