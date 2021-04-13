@@ -2,71 +2,219 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/a386e432/img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Gallery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500&map;subset=cyrillic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+       *{
+           box-sizing: border-box;
+       }
+
+       html{
+           text-align: center;
+           font-size: 16px;
+       }
+
+       body{
+           margin: 0;
+           font-family: "Roboto" , sans-serif;
+           background-color: darkcyan;
+       }
+
+       .form-container{
+            background-color: violet;
+            max-width: 450px;
+            width: 95%;
+            margin: auto;
+            padding: 40px;
+       }
+
+       #form{
+         
+       }
+
+       textarea{
+            overflow: hidden;
+            resize: none;
+            padding-top: 0;
+            height: 3.5rem;
+            padding-left: 0;
+         }
+
+       input, textarea{
+           display: block;
+           width: 100%;
+           margin: 0.5rem 0;
+           padding: 0 0 0.8rem;
+           outline: none;
+           font-size: 1rem;
+           letter-spacing: 0.75px;
+           border: none;
+           border-bottom: 1.5 white solid;
+           border-radius: 0.5px;
+           transition: 1s ease;
+       }
+  
+
+       .field{
+           margin: 1rem 0;
+       }
+
+       input:focus, textarea:focus{
+           border-color: orange;
+           border-color: rgb(red, green, blue)
+       }
+
+       .form-heading{
+           margin-top: 0;
+           font-size: 1.5rem;
+           font-weight: 500;
+           letter-spacing: 0.75px;
+       }
+        
+        #submit{
+            border: none;
+            background-color: #ffbf02;
+            color: #fff;
+            text-shadow: 0 0 2px rgb ( 0, 0, 0.2);
+            padding: 0.6rem 0;
+            width: 150px;
+            margin-left: calc(100%-150px);
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: 0.2 ease;
+        }
+
+          #submit:active{
+              transform: translate(5px, -10px);
+              box-shadow: none;
+          }
+
+          label{
+              display: block;
+              font-size: 0.9rem;
+              letter-spacing: 0.75px;
+              color: rgb(68, 68, 68);
+              transform: translateY(2rem);
+              transition: 0.5s ease;
+          }
+
+          .focused{
+              transform: translateX(-12.5%) translateY(0.2rem) scale(0.75);
+          }
+
+
+          input:-webkit-autofill{
+                -webkit-box-shadow: 0 0 0px 1000px aquamarine inset;
+          }
+
+    </style>
+    <title>Форма обратной связи</title>
 </head>
 <body>
+    <div class="form-container">
+        <h3 class="form-heading">Форма обратной связи</h3>
+        <form action="" id="form" method="POST">
 
-
-   
-  <div class="snowContainer">
-    <div id="snow">
-
-     
-      <main>
-        <div class="back">
-          <h1>Gallery</h1>
-          <div class="b"><p class="op"> Всем хай , меня зовут  Islan ,  это мой  первый сайт</p>.</div>
-            <br><br>
-            <div class="b"><p>Spider-man</p></div>
-            <br><br>
-            <div class="b"><p>Thor</p></div>
-            <br><br>
-            <div class="b"><p>Iron-man</p></div>
-            <br><br>
-            <div class="b"><p>Hulk</p></div>
-            <br><br>
-            <div class="b"><p>Aqua-man</p></div>
-            <br><br>
-          
-        </div>
-
-          <div class="parent">
-          
-            <div class="photo  photo1"></div>
-            <div class="photo  photo2"></div>
-            <div class="photo  photo3"></div>
-            <div class="photo  photo4"></div>
-            <div class="photo  photo5"></div>
-            <div class="photo  photo6"></div>
-            <div class="photo  photo7"></div>
-            <div class="photo  photo8"></div>
-            <div class="photo  photo9"></div>
-            <div class="photo  photo10"></div>
-            <div class="photo  photo11"></div>
-            <div class="photo  photo12"></div>
-            
-            <div class="video">
-              <div class="video1">
-                <iframe width="390" height="242,2" src="https://www.youtube.com/embed/YAWt-gktZqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div class="video1">
-                <iframe width="390" height="242,2" src="https://www.youtube.com/embed/VfYxEKoEkdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+            <div class="field">
+                <label for="name" >Имя и Фамилия</label>
+                <input type="text" id="name" name="name">
             </div>
-          </div>
 
-          </div>
-          
-  
-      </main>
-      
-      
+
+            <div class="field">
+                <label for="email">Адрес эл.почты</label>
+                <input type="email" id="email" name="_replyto">
+            </div>
+
+            <div class="field">
+                <label for="message">Сообщение</label>
+                <textarea name="message" id="message" cols="20" rows="5" wrap="hard"></textarea>
+            </div>
+           
+            <input type="submit" id="submit">
+
+        </form>
     </div>
-    </div>
+
+    <script>
+       
+       var inputs = [].slice.call(document.querySelectorAll("input"));
+
+
+       var textarea = document.getElementById("message");
+       textarea.addEventListener("focusin", focusInInputHandler);
+       textarea.addEventListener("focusout", focusOutInputHandler);
+       if(textarea.value != ""){
+          focusOutInputHandler.call(textarea);
+       }
+
+
+    //    console.log(inpunts);
+       
+       inputs.forEach(function(input){
+           if(input.getAttribute("type") != "sumbit"){
+               if(input.value !== ""){
+                // var label = document.querySelector('label[for="' + input.id + '"]');
+                // label.classList.add("focused");
+                 focusInInputHandler(input);
+               }
+               console.log(inputs);
+               input.addEventListener("focusin", focusInInputHandler);
+               input.addEventListener("focusout", focusOutInputHandler);
+               
+           }
+           
+       });
+
+       function encode(data){
+           var endcodeDate = [];
+           for(var key in data){
+            endcodeDate.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+           }
+           return endcodeDate.join("&");
+       }
+
+       function focusInInputHandler(){
+         var label = document.querySelector('label[for="' + this.id + '"]');
+         console.log(label);
+         label.classList.add("focused")
+       }
+
+       function focusOutInputHandler(){
+        var label = document.querySelector('label[for="' + this.id + '"]');
+        if(this.value == ""){
+            label.classList.remove("focused");
+            console.log(label);
+        }
+    
+}
+
+  var form = document.getElementById("form");
+  console.log(form);
+   
+  form.addEventListener("submit", function(e){
+      e.preventDefault(); 
+      
+      var data = {
+          "name": form.elements[0].value,
+          "_replyto": form.elements[1].value,
+          "message": form.elements[2].value, 
+      }
+      request = new XMLHttpRequest();
+      request.open("POST", "https://formspree.io/f/mgereyoq", true)
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send(encode(data));
+      form.reset();
+
+      inputs.forEach(function(input){
+          focusOutInputHandler.call(textarea);
+      })
+      focusOutInputHandler.call(textarea);
+  });
+
+
+    </script>
 </body>
 </html>
